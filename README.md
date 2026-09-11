@@ -17,6 +17,11 @@ src/
         └── ep-1&ep-2.js                     # File: How JS works — execution context, call stack (Namaste EP 1–2)
         └── ep-3&ep-4.js                     # File: Hoisting; how functions work & variable environments (EP 3–4)
         └── ep-5&ep-6.js                     # File: Shortest JS program, window & this; undefined vs not defined (EP 5–6)
+        └── ep-7.js                          # File: Scope chain & lexical environment (EP 7)
+        └── ep-8&ep-9.js                     # File: let / const, TDZ, block scope & shadowing (EP 8–9)
+        └── ep1-to-ep9-OP-ques.js            # File: Output Problems - 1 - (Ep1 → Ep9)
+    └── Closures & Functions/                # Component: theme for this phase
+        └── ep-10.js                         # File: Closures (EP 10)
 ```
 
 ## Current Progress
@@ -28,5 +33,8 @@ src/
 | Execution Model & Scope | How JS works: execution context, call stack (Namaste EP 1–2) | [`ep-1&ep-2.js`](<src/phase 1 - JS CORE (Namaste JS)/Execution Model & Scope/ep-1&ep-2.js>) |
 | Execution Model & Scope | Hoisting; how functions work & variable environments (EP 3–4) | [`ep-3&ep-4.js`](<src/phase 1 - JS CORE (Namaste JS)/Execution Model & Scope/ep-3&ep-4.js>) |
 | Execution Model & Scope | Shortest JS program, window & this; undefined vs not defined (EP 5–6) | [`ep-5&ep-6.js`](<src/phase 1 - JS CORE (Namaste JS)/Execution Model & Scope/ep-5&ep-6.js>) |
-
+| Execution Model & Scope | Scope chain & lexical environment (EP 7) | [`ep-7.js`](<src/phase 1 - JS CORE (Namaste JS)/Execution Model & Scope/ep-7.js>) |
+| Execution Model & Scope | let / const, TDZ, block scope & shadowing (EP 8–9) | [`ep-8&ep-9.js`](<src/phase 1 - JS CORE (Namaste JS)/Execution Model & Scope/ep-8&ep-9.js>) |
+| Execution Model & Scope | Output Problems - 1 - (Ep1 → Ep9)| [`ep1-to-ep9-OP-ques.js`](<src/phase 1 - JS CORE (Namaste JS)/Execution Model & Scope/ep1-to-ep9-OP-ques.js>) |
+| Closures & Functions | Closures (EP 10) | [`ep-10.js`](<src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-10.js>) |
 
