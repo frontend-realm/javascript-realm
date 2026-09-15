@@ -23,6 +23,8 @@ src/
     └── Closures & Functions/                # Component: theme for this phase
         └── ep-10.js                         # File: Closures (EP 10)
         └── ep-11.js                         # File: setTimeout + closures — the classic var-in-loop problem (EP 11)
+        └── ep-12.js                         # File: Famous closure interview questions (EP 12)
+        └── ep-13.js                         # File: First-class functions; function statement vs expression vs arrow; anonymous functions (EP 13)
 ```
 
 ## Current Progress
@@ -39,3 +41,5 @@ src/
 | Execution Model & Scope | Output Problems - 1 - (Ep1 → Ep9)| [`ep1-to-ep9-OP-ques.js`](<src/phase 1 - JS CORE (Namaste JS)/Execution Model & Scope/ep1-to-ep9-OP-ques.js>) |
 | Closures & Functions | Closures (EP 10) | [`ep-10.js`](<src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-10.js>) |
 | Closures & Functions | setTimeout + closures — the classic var-in-loop problem (EP 11) | [`ep-11.js`](<src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-11.js>) |
+| Closures & Functions | Famous closure interview questions (EP 12) | [`ep-12.js`](<src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-12.js>) |
+| Closures & Functions | First-class functions; function statement vs expression vs arrow; anonymous functions (EP 13) | [`ep-13.js`](<src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-13.js>) |
