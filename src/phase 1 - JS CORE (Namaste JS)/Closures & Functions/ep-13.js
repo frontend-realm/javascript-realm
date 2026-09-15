@@ -86,6 +86,3 @@ setFunction(function () {
 })
 
 //7. First Class Function
-
-//Arrow Functions:
-// explained in later episodes .
