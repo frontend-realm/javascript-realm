@@ -26,6 +26,7 @@ src/
         └── ep-12.js                         # File: Famous closure interview questions (EP 12)
         └── ep-13.js                         # File: First-class functions; function statement vs expression; anonymous functions (EP 13)
         └── ep-14.js                         # File: Callback functions, event listeners, why remove listeners (EP 14)
+        └── ep10-to-ep14-OP-ques.js          # File: Output Problems - 2 - (Ep10 → Ep14)
 ```
 
 ## Current Progress
@@ -45,3 +46,4 @@ src/
 | Closures & Functions | Famous closure interview questions (EP 12) | [`ep-12.js`](<src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-12.js>) |
 | Closures & Functions | First-class functions; function statement vs expression; anonymous functions (EP 13) | [`ep-13.js`](<src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-13.js>) |
 | Closures & Functions | Callback functions, event listeners, why remove listeners (EP 14) | [`ep-14.js`](<src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-14.js>) |
+| Closures & Functions | Output Problems - 2 - (Ep10 → Ep14) | [`ep10-to-ep14-OP-ques.js`](<src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep10-to-ep14-OP-ques.js>) |
