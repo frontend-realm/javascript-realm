@@ -1,0 +1,5 @@
+/*
+
+    Its proper theoreotical posted in notion and note book
+
+*/

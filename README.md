@@ -27,6 +27,8 @@ src/
         └── ep-13.js                         # File: First-class functions; function statement vs expression; anonymous functions (EP 13)
         └── ep-14.js                         # File: Callback functions, event listeners, why remove listeners (EP 14)
         └── ep10-to-ep14-OP-ques.js          # File: Output Problems - 2 - (Ep10 → Ep14)
+    └── Event Loop & Functional JS/          # Component: theme for this phase
+        └── ep-15.js                         # File: Asynchronous JS & the event loop (EP 15)
 ```
 
 ## Current Progress
@@ -47,3 +49,4 @@ src/
 | Closures & Functions | First-class functions; function statement vs expression; anonymous functions (EP 13) | [`ep-13.js`](<src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-13.js>) |
 | Closures & Functions | Callback functions, event listeners, why remove listeners (EP 14) | [`ep-14.js`](<src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-14.js>) |
 | Closures & Functions | Output Problems - 2 - (Ep10 → Ep14) | [`ep10-to-ep14-OP-ques.js`](<src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep10-to-ep14-OP-ques.js>) |
+| Event Loop & Functional JS | Asynchronous JS & the event loop (EP 15) | [`ep-15.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-15.js>) |

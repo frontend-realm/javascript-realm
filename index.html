@@ -1,16 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS-Realm</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS Realm — Table of Contents</title>
+<style>
+  :root {
+    --bg: #0b0f17;
+    --surface: #121826;
+    --surface-2: #182131;
+    --border: #263041;
+    --text: #e6ebf5;
+    --text-dim: #93a1b8;
+    --accent: #f7df1e;
+    --accent-soft: rgba(247, 223, 30, 0.12);
+    --link: #7cc4ff;
+    --radius: 14px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  header.hero {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid rgba(247, 223, 30, 0.35);
+    padding: 4px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  h1.title {
+    font-size: clamp(2.4rem, 6vw, 3.4rem);
+    font-weight: 800;
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #ffffff 0%, #f7df1e 60%, #f0c419 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .subtitle {
+    color: var(--text-dim);
+    font-size: 1.05rem;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .legend {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
+
+  .legend span {
+    font-size: 12.5px;
+    color: var(--text-dim);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 8px;
+  }
+
+  .legend span b {
+    color: var(--text);
+  }
+
+  .legend .arrow {
+    background: none;
+    border: none;
+    padding: 6px 0;
+    color: var(--text-dim);
+  }
+
+  .toc {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .phase {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 20px 24px;
+    background: linear-gradient(180deg, var(--surface-2), var(--surface));
+    border-bottom: 1px solid var(--border);
+  }
+
+  .phase-header .tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 6px;
+    padding: 3px 8px;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+
+  .components {
+    padding: 8px 12px 16px;
+  }
+
+  details.component {
+    border-radius: 10px;
+    margin: 8px 0;
+    overflow: hidden;
+  }
+
+  details.component + details.component {
+    margin-top: 10px;
+  }
+
+  details.component summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    font-weight: 600;
+    color: var(--text);
+    background: var(--surface-2);
+    border-radius: 10px;
+    transition: background 0.15s ease;
+  }
+
+  details.component summary::-webkit-details-marker { display: none; }
+
+  details.component summary::before {
+    content: "▸";
+    display: inline-block;
+    color: var(--text-dim);
+    transition: transform 0.15s ease;
+    font-size: 12px;
+    width: 10px;
+  }
+
+  details.component[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  details.component summary:hover {
+    background: #1d2740;
+  }
+
+  .component-count {
+    margin-left: auto;
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--text-dim);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+
+  ul.topics {
+    list-style: none;
+    margin: 6px 4px 4px;
+    padding: 4px 0 4px 24px;
+    border-left: 2px solid var(--border);
+  }
+
+  ul.topics li {
+    padding: 9px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  ul.topics li:last-child {
+    border-bottom: none;
+  }
+
+  .topic-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .topic-name {
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .file-link {
+    flex-shrink: 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12.5px;
+    color: var(--link);
+    text-decoration: none;
+    background: rgba(124, 196, 255, 0.08);
+    border: 1px solid rgba(124, 196, 255, 0.25);
+    padding: 3px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+
+  .file-link:hover {
+    background: rgba(124, 196, 255, 0.18);
+  }
+
+  footer {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 12.5px;
+    margin-top: 56px;
+  }
+
+  footer a {
+    color: var(--text-dim);
+  }
+</style>
 </head>
 <body>
-    <h1>Welcome to JS-Realm</h1>
-    <p>This is a simple JavaScript realm for learning and practicing JavaScript concepts.</p>
-    <button id="clickMe">click Me</button>
-    
+  <div class="wrap">
+    <header class="hero">
+      <span class="badge">📘 Learning Log</span>
+      <h1 class="title">JS Realm</h1>
+      <p class="subtitle">
+        A structured, topic-by-topic log of my JavaScript learning journey —
+        organized as <b>Phases → Components → Topics → Files</b>, so the whole
+        realm grows the same way no matter how many topics get added.
+      </p>
+      <div class="legend">
+        <span>📦 <b>Phase</b> — broad stage of learning</span>
+        <span class="arrow">→</span>
+        <span>🧩 <b>Component</b> — theme within a phase</span>
+        <span class="arrow">→</span>
+        <span>📄 <b>Topic / File</b> — a single episode's notes &amp; code</span>
+      </div>
+    </header>
 
-    <script src="./src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep10-to-ep14-OP-ques.js"></script>
+    <main class="toc">
+
+      <!-- Phase 1 -->
+      <section class="phase">
+        <div class="phase-header">
+          <span class="tag">Phase 1</span>
+          <h2>JS Core (Namaste JS)</h2>
+        </div>
+
+        <div class="components">
+
+          <details class="component" open>
+            <summary>Execution Model &amp; Scope <span class="component-count">6 topics</span></summary>
+            <ul class="topics">
+              <li>
+                <div class="topic-row">
+                  <span class="topic-name">How JS works: execution context, call stack (Namaste EP 1–2)</span>
+                  <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Execution Model & Scope/ep-1&ep-2.js">ep-1&amp;ep-2.js</a>
+                </div>
+              </li>
+              <li>
+                <div class="topic-row">
+                  <span class="topic-name">Hoisting; how functions work &amp; variable environments (EP 3–4)</span>
+                  <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Execution Model & Scope/ep-3&ep-4.js">ep-3&amp;ep-4.js</a>
+                </div>
+              </li>
+              <li>
+                <div class="topic-row">
+                  <span class="topic-name">Shortest JS program, window &amp; this; undefined vs not defined (EP 5–6)</span>
+                  <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Execution Model & Scope/ep-5&ep-6.js">ep-5&amp;ep-6.js</a>
+                </div>
+              </li>
+              <li>
+                <div class="topic-row">
+                  <span class="topic-name">Scope chain &amp; lexical environment (EP 7)</span>
+                  <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Execution Model & Scope/ep-7.js">ep-7.js</a>
+                </div>
+              </li>
+              <li>
+                <div class="topic-row">
+                  <span class="topic-name">let / const, TDZ, block scope &amp; shadowing (EP 8–9)</span>
+                  <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Execution Model & Scope/ep-8&ep-9.js">ep-8&amp;ep-9.js</a>
+                </div>
+              </li>
+              <li>
+                <div class="topic-row">
+                  <span class="topic-name">Output Problems - 1 (Ep1 → Ep9)</span>
+                  <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Execution Model & Scope/ep1-to-ep9-OP-ques.js">ep1-to-ep9-OP-ques.js</a>
+                </div>
+              </li>
+            </ul>
+          </details>
+
+          <details class="component" open>
+            <summary>Closures &amp; Functions <span class="component-count">6 topics</span></summary>
+            <ul class="topics">
+              <li>
+                <div class="topic-row">
+                  <span class="topic-name">Closures (EP 10)</span>
+                  <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-10.js">ep-10.js</a>
+                </div>
+              </li>
+              <li>
+                <div class="topic-row">
+                  <span class="topic-name">setTimeout + closures — the classic var-in-loop problem (EP 11)</span>
+                  <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-11.js">ep-11.js</a>
+                </div>
+              </li>
+              <li>
+                <div class="topic-row">
+                  <span class="topic-name">Famous closure interview questions (EP 12)</span>
+                  <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-12.js">ep-12.js</a>
+                </div>
+              </li>
+              <li>
+                <div class="topic-row">
+                  <span class="topic-name">First-class functions; function statement vs expression; anonymous functions (EP 13)</span>
+                  <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-13.js">ep-13.js</a>
+                </div>
+              </li>
+              <li>
+                <div class="topic-row">
+                  <span class="topic-name">Callback functions, event listeners, why remove listeners (EP 14)</span>
+                  <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-14.js">ep-14.js</a>
+                </div>
+              </li>
+              <li>
+                <div class="topic-row">
+                  <span class="topic-name">Output Problems - 2 (Ep10 → Ep14)</span>
+                  <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep10-to-ep14-OP-ques.js">ep10-to-ep14-OP-ques.js</a>
+                </div>
+              </li>
+            </ul>
+          </details>
+
+          <details class="component" open>
+            <summary>Event Loop &amp; Functional JS <span class="component-count">1 topic</span></summary>
+            <ul class="topics">
+              <li>
+                <div class="topic-row">
+                  <span class="topic-name">Asynchronous JS &amp; the event loop (EP 15)</span>
+                  <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-15.js">ep-15.js</a>
+                </div>
+              </li>
+            </ul>
+          </details>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      Full folder structure &amp; conventions live in <a href="./README.md">README.md</a>
+    </footer>
+  </div>
 </body>
 </html>
+</content>
+</invoke>
