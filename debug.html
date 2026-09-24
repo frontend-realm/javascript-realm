@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Realm — Debug</title>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --surface: #121826;
+      --surface-2: #182131;
+      --border: #263041;
+      --text: #e6ebf5;
+      --text-dim: #93a1b8;
+      --accent: #f7df1e;
+      --accent-soft: rgba(247, 223, 30, 0.12);
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 24px 24px 96px;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .back:hover {
+      background: #1d2740;
+      border-color: #34425a;
+    }
+
+    header.hero {
+      text-align: center;
+      margin: 32px 0 40px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(247, 223, 30, 0.35);
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1.title {
+      font-size: clamp(2.2rem, 6vw, 3rem);
+      font-weight: 800;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #ffffff 0%, #f7df1e 60%, #f0c419 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      color: var(--text-dim);
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .attached {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 22px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #062b17;
+      background: #3ddc84;
+      border: 1px solid #3ddc84;
+      border-radius: 999px;
+      box-shadow: 0 4px 18px rgba(61, 220, 132, 0.2);
+    }
+
+    .attached .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #062b17;
+    }
+
+    .attached-file {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12.5px;
+      font-weight: 700;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .card-header {
+      padding: 16px 24px;
+      background: linear-gradient(180deg, var(--surface-2), var(--surface));
+      border-bottom: 1px solid var(--border);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .card-body {
+      padding: 20px 24px;
+      color: var(--text-dim);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .card-body b { color: var(--text); }
+
+    kbd, code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12.5px;
+      background: rgba(124, 196, 255, 0.08);
+      border: 1px solid rgba(124, 196, 255, 0.25);
+      color: #7cc4ff;
+      padding: 2px 7px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="./index.html">← Back</a>
+
+    <header class="hero">
+      <span class="badge">🐞 Debug</span>
+      <h1 class="title">Debug Console</h1>
+      <p class="subtitle">
+        Attach a file below, open DevTools, and step through it with breakpoints.
+      </p>
+      <div class="attached" id="attachedPill">
+        <span class="dot"></span>
+        Attached: <span class="attached-file" id="attachedFile">—</span>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="card-header">How to debug</div>
+      <div class="card-body">
+        1. Set the file path in the <code>&lt;script src&gt;</code> tag in <code>debug.html</code>.<br>
+        2. Open DevTools with <kbd>F12</kbd> or <kbd>⌘ ⌥ I</kbd>.<br>
+        3. Find the file under <b>Sources</b> and click a line number to add a breakpoint, or put <code>debugger;</code> in the file.<br>
+        4. Reload the page to re-run it.
+      </div>
+    </section>
+  </div>
+
+  <!-- Put the path of the file you want to debug in src (defer = runs after the page is built) -->
+  <script defer src="./src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-17.js"></script>
+
+  <!-- Fills in the green "Attached" pill from the src above. Runs during parsing, i.e. before the deferred file. -->
+  <script>
+    (() => {
+      const src = document.currentScript.previousElementSibling.getAttribute("src");
+      document.getElementById("attachedFile").textContent = src.split("/").pop();
+      document.getElementById("attachedPill").title = src;
+    })();
+  </script>
+</body>
+</html>

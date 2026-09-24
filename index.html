@@ -29,6 +29,32 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  .debug-btn {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #14170a;
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 4px 18px rgba(247, 223, 30, 0.18);
+    transition: background 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .debug-btn:hover {
+    background: #ffe94d;
+    box-shadow: 0 6px 22px rgba(247, 223, 30, 0.3);
+  }
+
   .wrap {
     max-width: 920px;
     margin: 0 auto;
@@ -260,6 +286,8 @@
 </style>
 </head>
 <body>
+  <a class="debug-btn" href="./debug.html" title="Open a file in the debug page">🐞 Debug</a>
+
   <div class="wrap">
     <header class="hero">
       <span class="badge">📘 Learning Log</span>
@@ -374,12 +402,24 @@
           </details>
 
           <details class="component" open>
-            <summary>Event Loop &amp; Functional JS <span class="component-count">1 topic</span></summary>
+            <summary>Event Loop &amp; Functional JS <span class="component-count">3 topics</span></summary>
             <ul class="topics">
               <li>
                 <div class="topic-row">
                   <span class="topic-name">Asynchronous JS &amp; the event loop (EP 15)</span>
                   <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-15.js">ep-15.js</a>
+                </div>
+              </li>
+              <li>
+                <div class="topic-row">
+                  <span class="topic-name">JS engine &amp; V8 architecture: parser, interpreter, JIT, GC (EP 16)</span>
+                  <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-16.js">ep-16.js</a>
+                </div>
+              </li>
+              <li>
+                <div class="topic-row">
+                  <span class="topic-name">Trust issues with setTimeout: timer clamping, blocking main thread (EP 17)</span>
+                  <a class="file-link" href="./src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-17.js">ep-17.js</a>
                 </div>
               </li>
             </ul>
@@ -396,5 +436,3 @@
   </div>
 </body>
 </html>
-</content>
-</invoke>

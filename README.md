@@ -29,6 +29,8 @@ src/
         └── ep10-to-ep14-OP-ques.js          # File: Output Problems - 2 - (Ep10 → Ep14)
     └── Event Loop & Functional JS/          # Component: theme for this phase
         └── ep-15.js                         # File: Asynchronous JS & the event loop (EP 15)
+        └── ep-16.js                         # File: JS engine & V8 architecture: parser, interpreter, JIT, GC (EP 16)
+        └── ep-17.js                         # File: Trust issues with setTimeout: timer clamping, blocking main thread (EP 17)
 ```
 
 ## Current Progress
@@ -50,3 +52,5 @@ src/
 | Closures & Functions | Callback functions, event listeners, why remove listeners (EP 14) | [`ep-14.js`](<src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep-14.js>) |
 | Closures & Functions | Output Problems - 2 - (Ep10 → Ep14) | [`ep10-to-ep14-OP-ques.js`](<src/phase 1 - JS CORE (Namaste JS)/Closures & Functions/ep10-to-ep14-OP-ques.js>) |
 | Event Loop & Functional JS | Asynchronous JS & the event loop (EP 15) | [`ep-15.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-15.js>) |
+| Event Loop & Functional JS | JS engine & V8 architecture: parser, interpreter, JIT, GC (EP 16) | [`ep-16.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-16.js>) |
+| Event Loop & Functional JS | Trust issues with setTimeout: timer clamping, blocking main thread (EP 17) | [`ep-17.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-17.js>) |
