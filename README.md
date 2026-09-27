@@ -31,6 +31,7 @@ src/
         └── ep-15.js                         # File: Asynchronous JS & the event loop (EP 15)
         └── ep-16.js                         # File: JS engine & V8 architecture: parser, interpreter, JIT, GC (EP 16)
         └── ep-17.js                         # File: Trust issues with setTimeout: timer clamping, blocking main thread (EP 17)
+        └── ep15-ep17-OP-ques.js             # File: Output Problems - 3 - (Ep15 → Ep17) — Event Loops
         └── ep-18.js                         # File: Higher-order functions & functional programming (EP 18)
 ```
 
@@ -55,4 +56,5 @@ src/
 | Event Loop & Functional JS | Asynchronous JS & the event loop (EP 15) | [`ep-15.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-15.js>) |
 | Event Loop & Functional JS | JS engine & V8 architecture: parser, interpreter, JIT, GC (EP 16) | [`ep-16.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-16.js>) |
 | Event Loop & Functional JS | Trust issues with setTimeout: timer clamping, blocking main thread (EP 17) | [`ep-17.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-17.js>) |
+| Event Loop & Functional JS | Output Problems - 3 - (Ep15 → Ep17) — Event Loops | [`ep15-ep17-OP-ques.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep15-ep17-OP-ques.js>) |
 | Event Loop & Functional JS | Higher-order functions & functional programming (EP 18) | [`ep-18.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-18.js>) |
