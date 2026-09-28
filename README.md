@@ -33,6 +33,8 @@ src/
         └── ep-17.js                         # File: Trust issues with setTimeout: timer clamping, blocking main thread (EP 17)
         └── ep15-ep17-OP-ques.js             # File: Output Problems - 3 - (Ep15 → Ep17) — Event Loops
         └── ep-18.js                         # File: Higher-order functions & functional programming (EP 18)
+        └── ep-19.js                         # File: map, filter, reduce (EP 19)
+        └── coding-ques-ep19.js              # File: Coding Questions on map, filter, reduce (EP 19)
 ```
 
 ## Current Progress
@@ -58,3 +60,5 @@ src/
 | Event Loop & Functional JS | Trust issues with setTimeout: timer clamping, blocking main thread (EP 17) | [`ep-17.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-17.js>) |
 | Event Loop & Functional JS | Output Problems - 3 - (Ep15 → Ep17) — Event Loops | [`ep15-ep17-OP-ques.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep15-ep17-OP-ques.js>) |
 | Event Loop & Functional JS | Higher-order functions & functional programming (EP 18) | [`ep-18.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-18.js>) |
+| Event Loop & Functional JS | map, filter, reduce (EP 19) | [`ep-19.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-19.js>) |
+| Event Loop & Functional JS | Coding Questions on map , filter , reduce | [`ep-coding-question-ep19.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-coding-question-ep19.js>) |
