@@ -35,6 +35,8 @@ src/
         └── ep-18.js                         # File: Higher-order functions & functional programming (EP 18)
         └── ep-19.js                         # File: map, filter, reduce (EP 19)
         └── coding-ques-ep19.js              # File: Coding Questions on map, filter, reduce (EP 19)
+    └── Promises & Async/                    # Component: theme for this phase
+        └── s2-ep-1.js                       # File: Callback hell & inversion of control (S2 EP 1)
 ```
 
 ## Current Progress
@@ -62,3 +64,4 @@ src/
 | Event Loop & Functional JS | Higher-order functions & functional programming (EP 18) | [`ep-18.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-18.js>) |
 | Event Loop & Functional JS | map, filter, reduce (EP 19) | [`ep-19.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-19.js>) |
 | Event Loop & Functional JS | Coding Questions on map , filter , reduce | [`ep-coding-question-ep19.js`](<src/phase 1 - JS CORE (Namaste JS)/Event Loop & Functional JS/ep-coding-question-ep19.js>) |
+| Promises & Async  | Callback hell & inversion of control (S2 EP 1)  | [`s2-ep-1.js`](<src/phase 1 - JS CORE (Namaste JS)/Promises & Async/s2-ep-1.js>) |
