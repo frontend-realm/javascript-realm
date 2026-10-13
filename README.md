@@ -40,6 +40,7 @@ src/
         └── s2-ep-2.js                       # File: Promises: what, why, states, then (S2 EP 2)
         └── s2-ep-3.js                       # File: Creating promises, chaining, error handling (S2 EP 3)
         └── s2-ep-4.js                       # File: Promise APIs: all, allSettled, race, any (S2 EP 4)
+        └── s2-ep-5.js                       # File: async / await + error handling (S2 EP 5)
 ```
 
 ## Current Progress
@@ -71,3 +72,4 @@ src/
 | Promises & Async  | Promises: what, why, states, then (S2 EP 2)  | [`s2-ep-2.js`](<src/phase 1 - JS CORE (Namaste JS)/Promises & Async/s2-ep-2.js>) |
 | Promises & Async  | Creating promises, chaining, error handling (S2 EP 3) | [`s2-ep-3.js`](<src/phase 1 - JS CORE (Namaste JS)/Promises & Async/s2-ep-3.js>) |
 | Promises & Async  | Promise APIs: all, allSettled, race, any (S2 EP 4) | [`s2-ep-4.js`](<src/phase 1 - JS CORE (Namaste JS)/Promises & Async/s2-ep-4.js>) |
+| Promises & Async  | async / await + error handling (S2 EP 5) | [`s2-ep-5.js`](<src/phase 1 - JS CORE (Namaste JS)/Promises & Async/s2-ep-5.js>) |
